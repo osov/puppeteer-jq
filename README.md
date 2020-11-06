@@ -4,6 +4,7 @@
  ### Использование
 
 Установка через npm:
+
 `npm install git+https://github.com/osov/puppeteer-jq`
 
 ```
