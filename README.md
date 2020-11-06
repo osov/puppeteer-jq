@@ -3,11 +3,12 @@
  
  ### Использование
 
-Подключение `jQuery.inject(page)`
+Установка через npm:
+`npm install git+https://github.com/osov/puppeteer-jq`
 
-```JavaScript
-// подключение библиотеки
-const jQuery = require('./puppeteer-jq-main');
+```
+const jQuery = require('puppeteer-jq'); // если ставили через npm
+const jQuery = require('./puppeteer-jq-main'); // если скачали руками
 
 ....
 
