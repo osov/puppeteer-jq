@@ -26,6 +26,7 @@ page.waitForjQuery(selector) : array
  ```JavaScript
 await page.waitForjQuery(".test");
 const text = await page.jQuery(".test").text();
+const url = await page.jQuery(".test").attr('href');
 ```
 
   ### Стандартные методы в которых подключается jQuery
