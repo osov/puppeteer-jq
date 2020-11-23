@@ -72,20 +72,22 @@ const handlerRoot = {
 		{
 			case 'toString':
 			case 'valueOf':
-			return target[p];
 			case 'code':
 			case 'selector':
 			case 'page':
-			return target[p];
+				return target[p];
 			case 'then':
-			return (...args) => {
-				const lastExec = target.exec(true);
-				return lastExec.then(...args);
-			};
+				return (...args) => {
+					const lastExec = target.exec(true);
+					return lastExec.then(...args);
+				};
 			case 'exec':
-			return (...args) => {
-				return target.exec(true);
-			};
+				return (...args) => {
+					return target.exec(true);
+				};
+			case 'length':
+				target.code += '.length';
+				return target.exec(false);
 		}
 		return (...args) =>
 		{
