@@ -32,8 +32,11 @@ async function getHandle(page, code)
 	handle = await page.evaluateHandle(code);
 	const array = [];
 	const properties = await handle.getProperties();
+	const context = properties.get('context');
 	for (const property of properties.values())
 	{
+		if (property === context)
+			continue;
 		const elementHandle = property.asElement();
 		if (elementHandle)
 			array.push(elementHandle);
