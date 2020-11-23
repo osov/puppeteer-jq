@@ -41,4 +41,6 @@ const url = await page.jQuery(".test").attr('href');
  ```JavaScript
 const text = await page.jQuery("body").find("h1").text();
 await page.jQuery("body").find("h2").text('empty');
+const cnt = (await page.jQuery("body").find("a")).length;
+
 ```
